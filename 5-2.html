@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Classical Mechanics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script>
+    function showTextAndHideImage() {
+      // Get the image and text elements
+      var image = document.getElementById('bottleImage');
+      var text = document.getElementById('descriptionText');
+    
+      // Hide the image and show the text
+      image.style.display = 'none';
+      text.style.display = 'block';
+    }
+    </script>    
+  <style>
+    .yellow {
+      color: #EAC100	;
+      font-weight: bold;
+    }
+    .red {
+      color:red;
+      font-weight: bold;
+    }
+    .highlight {
+        font-size: 1.5em; 
+        color: red; 
+        font-weight: bold;
+    }
+    .bold{
+      font-weight: bold
+    }
+    p {
+  position: relative; /* 確立相對定位的上下文 */
+  padding-right: 50px; /* 為箭頭預留足夠的空間 */
+}
+
+.arrow {
+  position: absolute; /* 箭頭的絕對定位相對於其包含的 <p> 元素 */
+  right: 10px; /* 靠右邊距10px */
+  top: 0; /* 頂部對齊 */
+  bottom: 0; /* 底部對齊 */
+  margin: auto; /* 自動邊距將垂直居中箭頭 */
+  height: 20px; /* 箭頭的高度 */
+  background: none; /* 無背景色 */
+}
+.image2 img {
+             display: inline-block;
+             width: 350px; 
+             height: 280px;
+         }
+.image3 {
+display: flex;
+justify-content: space-between; 
+}
+
+.image3 img {
+width: 220px;
+height: 150px; 
+margin-bottom: 20px;
+}
+
+.small img{
+  width: 450px;
+  height: 300px; 
+}
+.little img{
+  width: 300px;
+  height: 150px; 
+  margin: 20px;
+
+}
+.BOTTLE {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.BOTTLE img{
+  width:240px;
+  height:400px;
+  margin-bottom: 20px
+}
+</style>
+
+</head>
+<body class="is-preload">
+
+ <!-- Wrapper-->
+  <div id="wrapper">
+
+   <!-- Nav -->
+    <nav id="nav">
+     <a href="#home" class="icon solid fa-home"><span>Home</span></a>
+     <a href="#work2" class="icon solid fa-heart"><span>SHM</a>
+     <a href="#work3" class="icon solid fa-heart"><span>Different Solutions</span></a>
+     <a href="#work4" class="icon solid fa-heart"><span>EXAMPLE 5.2</span></a>
+    </nav>
+
+   <!-- Main -->
+   <div id="main">
+
+     <!-- Me -->
+     <article id="home" class="panel intro">
+       <header>
+           <h1>Classical Mechanics <span class="bold">5-2</span></h1>
+           <P>We are going to talk about SHM.</P>
+                     </header>
+       <a href="#work2" class="jumplink pic">
+         <span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
+         <img src="images/me.jpg" alt="" />
+       </a>
+
+   </article>        
+
+     <article id="work2" class="panel">
+        <header>
+            <h1>Simple Harmonic Motion</h1>
+        </header>
+        <p>
+            We can use a block and a spring to give an example.
+            <span class="small"><img src="images\Mass_Spring_System_Undamped_case_Simple_harmonic_motion.gif" alt="" /></span>
+        </p>
+        <P>
+            We all know that: \(\ \ m\ddot{x} = F_{x} = -kx \)
+        </P>
+        <p>
+            We can rewrirw it:
+            \( \ddot{x} = -\frac{k}{m} x = -\omega^2 x            \)
+            There is a new symbol:\(\ \ \omega =\sqrt\frac{k}{m}\) 
+        </p>
+        <section>
+          <a href="#work3" class="icon solid fa-dog">
+            <span>work3</span>
+          </a>
+        </section>
+      </article>
+  
+        <article id="work3" class="panel">
+          <header>
+              <h1>Different Solutions</h1>
+          </header>
+          <head>
+            <h3>Exponential Solutions</h3>
+          </head>
+          <p>Look at \(\ \ m\ddot{x} = F_{x} = -kx \)</p>
+          <P>It is a <span class="red">homogeneous differential equation</span> </P>
+          <p>Recall Example 1.2:</p>
+          <p>
+            <span class="little"><img src="images\未命名簡報.jpg" />
+              <img src="images\1.jpg"/>
+            </span>
+          </p>
+          <p>We can use exponential now.</p>
+          <p>
+            $$
+            x(t) = C_1 e^{i\omega t} + C_2 e^{-i\omega t}
+            $$
+          </p>
+          <p>It is called the superposition principle.</p>
+          <head>
+            <h3>Sine and Cosine Solutions</h3>
+          </head>
+          <p></p>
+          <p>
+            \(B_1 = C_1 + C_2 \\
+            B_2 = i(C_1 - C_2)
+            \)
+          </p>
+          <p>
+            By substituing, it would be:
+           \( x(t) = B_1 \cos(\omega t) + B_2 \sin(\omega t)\)
+          </p>
+          <p class="little">
+          </p>
+          <p>
+            X(0)=\(\ B_1\) and \(\omega B_2=V_o\)
+          </p>
+          <p>If \(x=x_o\) at rest \(v=v_o\), we can get: \(\ x(t) = x_0 \cos(\omega t)\)</p>
+          <p>If \(x_0=0\) at t=0, we can get: \(x(t) = \frac{V_0}{\omega} \sin(\omega t)  \)</p>
+          <p>The period is: \(\tau = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{m}{k}}\)</p>
+          <head>
+            <h3>Phase-Shifted Cosine Solution</h3>
+          </head>
+          <p>The last solution is hard to solve because of 2 conditions.We can just combine it with cosine.</p>
+          <p>
+            <span class="little"><img src="images\3.jpg"></span>
+          </p>
+          <p>
+            \(x(t) = A \left[ \frac{B_1}{A} \cos(\omega t) + \frac{B_2}{A} \sin(\omega t) \right]\\
+            = A [\cos \delta \cos(\omega t) + \sin \delta \sin(\omega t)]\\
+            = A \cos(\omega t - \delta)
+            \)
+          </p>
+          <head>
+            <h3>Complex Exponential </h3>
+          </head>
+          <p>
+            We can review the relationship between coefficients:
+            <p></p>
+            \(C_1 = \frac{1}{2} (B_1 - i B_2) \quad \text{and} \quad C_2 = \frac{1}{2} (B_1 + i B_2)
+            \)
+          </p>
+          <p>            They are the complex conjugate of each other.
+          </p>
+          <p>
+            \(C_2=C_1^{*} \\
+              x(t) = C_1{e^{i\omega t}}+C_1^{*}{e^{i\omega t}} \\
+              x(t) = 2 R e{C_1 e^{i\omega t}} \\
+            C = 2C_1,
+            C = B_1 - iB_2 = Ae^{-i\delta} \\
+            x(t) = R e{Ce^{i\omega t}} = Re{Ae^{i(\omega t - \delta)}}
+            \)
+          </p>
+          <p><span class="little"><img src="images\a.jpg"></span><span class="little"><img src="images\C.svg"></span></p>
+          <section>
+            <a href="#work4" class="icon solid fa-dog">
+              <span>work4</span>
+            </a>
+          </section>
+         </article>
+
+
+
+          <article id="work4" class="panel">
+            <header>
+                <h1>EXAMPLE 5.2</h1>
+                
+                <p class="BOTTLE" onclick="showTextAndHideImage()">
+                  <img id="bottleImage" src="images/BOTTLE.jpg">
+                  <p id="descriptionText" style="display:none;">A bottle is floating upright in a large bucket of water.
+                    In equilibrium it is submerged to a depth do below the surface of the water.
+                    Show that if it is pushed down to a depth d and released, 
+                    it will execute harmonic motion, and find the frequency of its oscillations.
+                    If do=20cm, what is the period?
+                    $$
+                    m\ddot{x} = mg - \rho gA(d_0 + x) \\
+                    \ddot{x} = -\frac{\rho gAx}{m} \\
+                    \frac{\rho gA}{m} = \frac{g}{d_0} \quad \ddot{x} = -\frac{g}{d_0}x
+                    $$
+                    It is exactly the equation for simple harmonic motion. 
+                    $$
+                    \tau = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{d_0}{g}} = 2\pi \sqrt{\frac{0.20\text{m}}{9.8\text{m/s}^2}} = 0.9 \text{sec}$$
+                  </p>
+                </section>
+                <a href="index.html" class="icon solid fa-home">
+                  <span>MENU</span>
+                </a>
+               </article>
+              
+            </header>
+  
+
+        <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+
+ </body>
+</html>

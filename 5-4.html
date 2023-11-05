@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Classical Mechanics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <style>
+    .highlight {
+        font-size: 1.5em; 
+        color: red; 
+        font-weight: bold;
+    }
+    .bold{
+      font-weight: bold
+    }
+</style>
+ </head>
+ <body class="is-preload">
+
+  <!-- Wrapper-->
+   <div id="wrapper">
+
+    <!-- Nav -->
+     <nav id="nav">
+      <a href="#" class="icon solid fa-home"><span>Home</span></a>
+      <a href="#work2" class="icon solid fa-heart"><span>Damping</span></a>
+      <a href="#work3" class="icon solid fa-heart"><span>Underdamping</span></a>
+      <a href="#work4" class="icon solid fa-heart"><span>Overdamping</span></a>
+       <a href="#work5" class="icon solid fa-heart"><span>Critical Damping</span></a>
+     <a href="#work6" class="icon solid fa-heart"><span>Phase Diagram</span></a>
+      <a href="#work7" class="icon solid fa-heart"><span>Damping in RLC Circuit</span></a>
+     </nav>
+
+    <!-- Main -->
+     <div id="main">
+
+      <!-- Me -->
+      <article id="home" class="panel intro">
+        <header>
+            <h1>Classical Mechanics 
+              <span class="bold">5-4</span></h1>        
+              <p class="">
+            In 5.1 and 5.2, we don't take care about resistance.
+            So, Hooke’s law can be written as:
+            <span class="highlight">F=ma=-kx</span>            
+      </p>
+
+        </header>
+        
+      <a href="#work2" class="jumplink pic">
+        <span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
+        <img src="images/me.jpg" alt="" />
+      </a>
+
+    </article>        
+
+       <style>
+         .inline-images img {
+             display: inline-block;
+             width: 300px; 
+             height: 300px;
+             margin-right: 20px; 
+         }
+     </style>
+
+    <style>
+            .small img {
+            width: 240px;
+            height: 150px; 
+        }
+    </style>
+     <!-- Work -->
+      <article id="work2" class="panel">
+         <header>
+            <h1>Where can we see damping?</h1>
+         </header>
+         <p class="small">
+            <img src="images\單擺.gif" alt="Image 1" />
+            <img src="images\Picture1.png" alt="Image 2" />
+            <img src="images\series-RLC-circuits-2.png" alt="Image 3" />
+        </p>
+
+         <header>
+          <h2>Different situations</h2>
+       </header>
+       <p>
+        when we consider air resistence:
+        \( m \ddot{x} + b \dot{x} + kx = 0 \)
+      </p>
+      <p>It's a second order homogeneous differential equation.We can rewrite it as 
+        \( x(t) = e^{-\beta t} \left( C_1 e^{\sqrt{\beta^2 - \omega^2} t} + C_2 e^{-\sqrt{\beta^2 - \omega^2} t} \right) \)
+      </p>
+      <p> \( \beta \) is the most important part.</p>
+      <p>\( \beta \)=0, it is <span class="highlight">SHM</span></p>
+      <p>\( \beta \) < \( \omega_0 \), it is <span class="highlight">Underdamping</span></span></p>
+      <p>\( \beta \) > \( \omega_0 \), it is <span class="highlight">Overdamping</span></p>
+      <p>\( \beta \) = \( \omega_0 \), it is <span class="highlight">Critical damping</span></p>
+      <header>
+        <h2>Let's review SHM at now.</h2>
+    </header>
+    <p class="inline-images">
+        <img src="images\1.svg" alt="Image 1" />
+        <img src="images\2.svg" alt="Image 2" />
+    </p>
+    <p>
+      As what we talk:
+      \( x(t) = e^{-\beta t} \left( C_1 e^{\sqrt{\beta^2 - \omega^2} t} + C_2 e^{-\sqrt{\beta^2 - \omega^2} t} \right) \)
+    </p>  
+    <p>When  \( \beta \)=0:
+    \( x(t) = C_1 e^{i\omega t} + C_2 e^{-i\omega t} \)
+  </p>
+    
+    
+    <p>
+      Which can be represented in terms of amplitude and phase as: 
+      \( x(t) \Rightarrow A\cos(\omega_0 t - \delta) \)
+    </p>
+
+      <section>
+        <a href="#work3" class="icon solid fa-dog">
+          <span>work3</span>
+        </a>
+      </section>
+    </article>
+
+<style>
+
+  .image-cont img {
+          width: 350px;
+          height: 300px; 
+          margin: 0 10px; 
+      }
+</style>
+       <article id="work3" class="panel">
+        <header>
+         <h2>Underdamping</h2>
+        </header>
+        <header>
+          <h5>when  \( \beta \) < \( \omega_0 \):</h5>
+        </header>
+        <p class="image-cont">
+        <img src="images\未命名簡報.svg" alt="" />
+        <img src="images\Underdamping.gif" alt="" />
+        </p>
+        <p>
+          If \( \beta \) < \( \omega_0 \):
+          $$
+          \sqrt{\beta^2 - \omega_0^2} = i\sqrt{\omega_0^2 - \beta^2} = i\omega_1
+          $$
+          We have the new frequency, and we can rewrite a new equation:
+          $$
+          x(t) = e^{-\beta t} (C_1 e^{i\omega t} + C_2 e^{-i\omega t})
+          $$
+
+          $$
+          x(t) = A e^{-\beta t} \cos(\omega t - \delta)
+          $$
+          We substitue $$ (C_1 e^{i\omega t} + C_2 e^{-i\omega t}) $$ $$ with $$ $$ A \cos(\omega t - \delta) $$
+        </p>
+        <p>
+          <img src="images\Comparison.gif" alt="" />
+        </p>
+        <p>
+          We compare S.H.M. with underdamped oscillation in Python, we can definitely see that the frequency of underdamped oscillation is less than the natural frequency.  
+          (0.99<1.00)    
+          But it isn't significant.
+        </p>      
+        <section>
+          <a href="#work4" class="icon solid fa-dog">
+            <span>work4</span>
+          </a>
+        </section>
+       </article>
+     
+        <style>
+
+          .work5-cont23 img {
+                  width: 350px;
+                  height: 300px; 
+                  margin: 0 10px; 
+              }
+        </style>
+      
+     <article id="work6" class="panel">
+      <header>
+       <h2>Conclusion</h2>
+      </header>
+      <p>We can make some conclusions now.</p>
+      <p class="work5-cont23">
+        <img src="images\Three Damping Situation.gif" alt="" />
+      </p>
+        <p>
+          In 5.2, we need to have   \( x(t), \dot{x}(t) \) to solve   \( F = m\ddot{x} = -kx \)
+      </p>
+      <p>
+        We can consider to use \( x(t), \dot{x}(t) \) to be the coordinates of a point in a two-dimensional  space.
+        It is called <span class="highlight">phase space</span>.
+      </p>
+      <p>The point can describe the state of a particle will follow a specific path in the phase plane.</p>
+      <p>All of the possible phase path constitute Phase Diagram.</p>
+
+      <p>In SHM, we have:\[
+          \begin{align*}
+          x(t) &= A \sin(\omega t - \delta) \\
+          \dot{x}(t) &= A\omega \cos(\omega t - \delta)
+          \end{align*}
+          \]
+      </p>
+      <p>We can use Ellipse function to rewrite:
+        \[
+\frac{x^2}{A^2} + \frac{\dot{x}^2}{A^2 \omega_0^2} = 1
+\]
+The total energy E of the oscillator is   \( E = \frac{1}{2} kA^2 \) and   \( \omega_0^2 = \frac{k}{m} \), so:
+
+\[
+\frac{x^2}{2E/k} + \frac{\dot{x}^2}{2E/m} = 1
+\]
+</p>
+     
+<style>
+  .image-containers10 {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  .image-containers10 img {
+      width: 360px;
+      height: 240px; 
+  }
+</style>
+
+<h5>Phase diagram with different energy</h5>
+      <div class="image-containers10">
+        <img src="images\PHA.svg" alt="" />
+        <p>
+          With more total energy, the more amplitude it will get.
+          And, the point will always be in a clockwise direction.
+        </p>
+    </div>
+
+      <head>
+        <h5>Underdamping</h5>
+      </head>
+      <div class="image-containers10">
+        <img src="images\Underdamped Phase Diagram.png" alt="" />
+        <p>We can see the logarithmic spiral in the diagram.
+          
+$$
+x(t) = Ae^{-\beta t}\cos(\omega t - \delta)
+$$
+
+$$
+\dot{x}(t) = -Ae^{-\beta t}[\beta\cos(\omega t - \delta) + \omega\sin(\omega t - \delta)]
+$$
+
+        </p>
+      </div>
+
+      <head>
+        <h6>Over and Critical damping</h6>
+      </head>
+      <div class="image-containers10">
+        <img src="images\Phase Diagram for Overdamping.png" alt="" />
+
+        <div class="image-containers10">
+          <img src="images\Critical Damping Phase Diagram.gif" alt="" />
+        </div>
+    
+      </div>
+      <section>
+        <a href="#work7" class="icon solid fa-dog">
+          <span>work7</span>
+        </a>
+      </section>
+     </article>
+
+
+
+<style>
+  .work5-cont img {
+          width: 350px;
+          height: 300px; 
+ 
+      }
+
+</style>
+<style>
+  .work5-cont2 img {
+          width: 500px;
+          height: 340px; 
+ 
+      }
+</style>
+
+   <article id="work4" class="panel">
+      <header>
+       <h2>Overdamping</h2>
+      </header>        
+      <header>
+        <h5>when  \( \beta \) > \( \omega_0 \):</h5>
+       </header>       
+       <p class="image-cont">
+        <img src="images\3.svg" alt="" />
+        <img src="images\Overdamping.gif" alt="" />
+       </p>
+      <p class="work5-cont"> 
+        <img src="images\Speed of Decay.png" alt="" /> 
+      </p>
+      <p>\( x(t) = C_1  e^{- (\beta+\sqrt{\beta^2-\omega^2}) t} + C_2  e^{- (\beta-\sqrt{\beta^2-\omega^2}) t} \)</p>
+      <p>We have Decay Parameter now.</p>
+      <p>We can see two terms in the diagram and equation, the yeollow tetm decreas dramatically.</p>
+
+      <section>
+        <a href="#work5" class="icon solid fa-dog">
+          <span>work5</span>
+        </a>
+      </section>
+     </article>
+
+     <style>
+      .work5-cont3 img {
+              width: 340px;
+              height: 290px; 
+     
+          }
+    </style>
+
+      <style>
+      .work5-cont4 img {
+              width: 500px;
+              height: 350px; 
+      
+          }
+    </style>
+
+   <article id="work5" class="panel">
+      <header>
+       <h2>Critical Damping</h2>
+      </header>
+      <h5>when  \( \beta \) = \( \omega_0 \):</h5>
+      <p class="work5-cont3">
+        <img src="images\Spring-mass_critically-damped.gif" alt="" />
+       <img src="images\Critical Damping.gif" alt="" />
+       </p>
+       <p>If \( \beta = \omega_0 \)
+      </p>
+       <p>
+        $$
+        x(t) = (C_1 + C_2t)e^{-\beta t}
+        $$
+        </p>
+        <p>
+          The speed of decay for critical damping is definitely faster than underdamping beacuse critical has two decay terms.
+        </p>
+        <p>The speed of critical damping is faster than overdamping, too.Because: 
+          \( \beta > \beta - \sqrt{\beta^2 - \omega_0^2} \)
+        </p>
+        <section>
+          <a href="#work6" class="icon solid fa-dog">
+            <span>work6</span>
+          </a>
+        </section>
+     </article>
+     
+     <style>
+      .image-containers {
+        display: flex;
+        justify-content: space-between; 
+      }
+  
+      .image-containers img {
+          width: 300px;
+          height: 200px; 
+          margin-bottom: 20px;
+      }
+  </style>
+  
+  <article id="work7" class="panel">
+      <header>
+         <h1>Damping in RLC Circuit</h1>
+      </header>
+  
+      <p> if we want to do experiments to show the damping in RLC Circuit</p>
+      <p>We need 3 things.</p>
+      <div class="image-containers">
+          <img src="images\R0131772-01.webp" alt="Image 1" />
+          <p>A resistor will consume energy of the circuit system.
+          The voltage across the resistor satisfy \( V_R = IR = iR \)
+          </p>
+      </div>
+      <div class="image-containers">
+          <img src="images\R1443337-01.jpg" alt="Image 2" />
+          <p>A capacitor store electric charge and discharge.
+            Capacitance is the ability to store electricity. So
+            \( C = \frac{q}{V_C} \Rightarrow V_C = \frac{1}{C} q \)
+            By KCL, we can get the equation that
+            \( V_L + V_R + V_C = 0 \Rightarrow L \frac{di}{dt} + R i + \frac{1}{C} q = 0 \)
+            And, we can have:  \( \beta = \frac{R}{2L} \) and \( \omega_0 = \sqrt{\frac{1}{LC}} \)
+            It is similar to damping string.
+            </p>
+      </div>
+
+      <div class="image-containers">
+        <img src="images\下載.jpeg" alt="Image 3" />
+        <p>An inductor will create an opposite voltage ⇒Lenz’s Law.
+          The Magnetic flux is proportional to current flowing through it, define   \( L = N \frac{d\Phi}{dI} \)
+          By Faraday’s law of electromagnetic induction,  \( e = -N \frac{d\Phi}{dt} = -N \frac{d\Phi}{dI} \frac{dI}{dt} \Rightarrow V_L = L \frac{di}{dt} \)
+        </div>
+        <head>
+          <h5>模擬器的效果
+          </h5>
+        </head>
+      <p>
+        <img src="images\RLC damping.gif" alt="Image 1" />
+        <head>
+          <h5>our real experiments</h5>
+        </head>
+      <style>
+      .image-containers222 {
+        display: flex;
+        justify-content: space-between; 
+      }
+  
+      .image-containers222 img {
+          width: 220px;
+          height: 150px; 
+          margin-bottom: 20px;
+      }
+  </style>
+     </p>
+        <p class="image-containers222">
+          <img src="images\0.001F_-_.png" alt="Image 1" />
+          <img src="images\0.0022F.png" alt="Image 2" />
+          <img src="images\680pF.png" alt="Image 3" />
+     </p>
+      <section>
+        We input square wave, which is different from 5.4.
+        But we can still see the ideal experimental performance.
+      </section>
+      <a href="index.html" class="icon solid fa-home">
+        <span>MENU</span>
+      </a>
+     </article>
+   
+
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+
+ </body>
+</html>

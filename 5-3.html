@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Classical Mechanics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <style>
+    .yellow {
+      color: #EAC100	;
+      font-weight: bold;
+    }
+    .red {
+      color:red;
+      font-weight: bold;
+    }
+    .highlight {
+        font-size: 1.5em; 
+        color: red; 
+        font-weight: bold;
+    }
+    .bold{
+      font-weight: bold
+    }
+    p {
+  position: relative; /* 確立相對定位的上下文 */
+  padding-right: 50px; /* 為箭頭預留足夠的空間 */
+}
+
+.arrow {
+  position: absolute; /* 箭頭的絕對定位相對於其包含的 <p> 元素 */
+  right: 10px; /* 靠右邊距10px */
+  top: 0; /* 頂部對齊 */
+  bottom: 0; /* 底部對齊 */
+  margin: auto; /* 自動邊距將垂直居中箭頭 */
+  height: 20px; /* 箭頭的高度 */
+  background: none; /* 無背景色 */
+}
+.inline-images img {
+             display: inline-block;
+             width: 350px; 
+             height: 280px;
+         }
+.image-containers222 {
+display: flex;
+justify-content: space-between; 
+}
+
+.image-containers222 img {
+width: 220px;
+height: 150px; 
+margin-bottom: 20px;
+}
+
+</style>
+
+ </head>
+ <body class="is-preload">
+
+  <!-- Wrapper-->
+   <div id="wrapper">
+
+    <!-- Nav -->
+     <nav id="nav">
+      <a href="#home" class="icon solid fa-home"><span>Home</span></a>
+      <a href="#work2" class="icon solid fa-heart"><span>Oscillator</span></a>
+      <a href="#work3" class="icon solid fa-heart"><span>Isotropic</span></a>
+      <a href="#work4" class="icon solid fa-heart"><span>Anisotropic</span></a>
+     </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Me -->
+      <article id="home" class="panel intro">
+        <header>
+            <h1>Classical Mechanics <span class="bold">5-3</span></h1>
+            <P>          We have learned one-dimensional simple harmonic motion in 5.2.
+              We are going to talk about two-dimensional restoring forces in 5.3.</P>
+                      </header>
+        <a href="#work2" class="jumplink pic">
+          <span class="arrow icon solid fa-chevron-right"><span>See my work1</span></span>
+          <img src="images/me.jpg" alt="" />
+        </a>
+
+    </article>        
+
+      <article id="work2" class="panel">
+         <header>
+            <h1>Oscillator</h1>
+         </header>
+         <p>We need to talk about two-dimensional restoring forces first.</p>
+         <p>In 5.2, the restoring force is <span class="highlight"> \(\vec{F} = -k \vec{x}\)
+        </span> .</p>
+        <p>But, in 5.3, the two-dimensional restoring force is <span class="highlight"> \(\vec{F} = -k_i \vec{r}\)
+        </span> .</p>
+         <p class="">
+          We are going to discuss it in 2 cases.
+        </p>
+        <head>
+          <h3>Case1.Isotropic Harmonic Oscillator</h3>
+        </head>
+        <p>The constant is same.
+          <span class="yellow">          $$
+            \vec{F} = -k\vec{r} \Leftrightarrow \begin{cases} 
+            F_x = -kx \\
+            F_y = -ky
+            \end{cases}
+            $$</span>
+        </p>
+        <p>We can write it like 5.2
+          $$
+          \begin{equation}
+          \left\{
+          \begin{aligned}
+          \ddot{x} + \omega^2 x &= 0 \\
+          \ddot{y} + \omega^2 y &= 0
+          \end{aligned}
+          \right.
+          \end{equation}
+          $$
+          \(\omega = \sqrt{\frac{k}{m}}\)
+          The solution would be:
+          $$
+          \begin{align*}
+          x(t) &= A\cos(\omega t - \alpha) \\
+          y(t) &= B\cos(\omega t - \beta)
+          \end{align*}
+          $$
+        </p>
+        <head>
+          <h3>
+            Case2.Anisotropic Harmonic Oscillator
+          </h3>
+          <p>The constant is different.
+            <span class="yellow">          $$
+              \vec{F} = -k\vec{r} \Leftrightarrow \begin{cases} 
+              F_x = -kx \\
+              F_y = -ky
+              \end{cases}
+              $$</span>
+  
+          </p>
+          <p>
+            It is just like case1.
+            $$
+            \begin{align*}
+            x(t) &= A\cos(\omega_x t - \alpha) \\
+            y(t) &= B\cos(\omega_y t - \beta)
+            \end{align*}
+            $$
+            Where \( \omega_x = \sqrt{\frac{k_x}{m}} \text{ and } \omega_y = \sqrt{\frac{k_y}{m}}\)
+          </p>
+  
+        </head>
+      <section>
+        <a href="#work3" class="icon solid fa-dog">
+          <span>work3</span>
+        </a>
+    </section>
+    </article>
+    <article id="work3" class="panel">
+      <header>
+         <h1>Isotropic Harmonic Oscillator</h1>
+      </header>
+      <p>We have learned how to write the equation.It is time to analysis it.To explain the path:</p>
+      <p>
+        $$
+        y(t) = B\cos[\omega t - \alpha + (\alpha - \beta)] \\
+        = B\cos(\omega t - \alpha)\cos(\alpha - \beta) - B\sin(\omega t - \alpha)\sin(\alpha - \beta)
+        $$
+      </p>
+      <p>We can define \(\delta =\alpha -\beta\) and \(\cos(\omega t -\alpha)=\frac{x}{A}\)to make it easier.</p>
+      <p>The function of motion is:
+        <span class="yellow">
+        $$
+        B^2x^2 - 2ABxy\cos\delta + A^2y^2 = A^2B^2\sin^2\delta
+        $$
+        </span>
+        It can be seen as an <span class="red">oval function.</span>
+      </p>
+      <head>
+        <h3>Different conditions:</h3>
+      </head>
+      <P>
+        (1)Circle:
+        \(
+        \delta = \pm \frac{\pi}{2}\quad\text{and}\quad A=B
+        \)
+        <p class="inline-images">        
+          <img src="images\5.3程式碼跟圖片\Circle Path of the Motion ani P.36.gif" alt="" />
+          <img src="images\5.3程式碼跟圖片\Circle Path of the Motion P.36.gif" alt="" /></p>
+        </p>
+        <p>
+          (2)Straight lines(Slope>0):
+          \(
+            \delta =0,2 \pi
+            \)    
+            $$
+            B^2x^2 - 2ABxy + A^2y^2 = 0 \implies (Bx - Ay)^2 = 0 \implies y = \frac{B}{A}x
+            $$
+            <p class="inline-images">        
+              <img src="images\5.3程式碼跟圖片\Straight Path of the Motion ani P.37.gif" alt="" />
+              <img src="images\5.3程式碼跟圖片\Straight Path of the Motion P.37.gif" alt="" />
+            </p>
+        <p>
+        (3)Straight lines(Slope<0):
+          \(
+            \delta =\pi \ or -\pi
+            \)    
+            $$
+            B^2x^2 - 2ABxy + A^2y^2 = 0 \implies (Bx - Ay)^2 = 0 \implies y = -\frac{B}{A}x
+            $$
+            <p class="inline-images">        
+              <img src="images\5.3程式碼跟圖片\Straight Path of the Motion 2 ani P.38.gif" alt="" />
+              <img src="images\5.3程式碼跟圖片\Straight Path of the Motion 2 P.38.gif" alt="" />
+            </p>
+            <p>
+              (4)Ellipse (Without rotation) :
+                \(
+                  \delta = \pm \frac{\pi}{2} 
+                  \)    
+                  $$
+                  \frac{x^2}{A^2} + \frac{y^2}{B^2} = 1                  $$
+                  <p class="inline-images">                     
+                    <img src="images\5.3程式碼跟圖片\Ellipse Path of the Motion ani P.39.gif" alt="" />
+                    <img src="images\5.3程式碼跟圖片\Ellipse Path of the Motion P.39.gif" alt="" />
+                  </p>      
+                  <p>
+                    (4)Other ellipse:
+                      \(
+                        \delta = 
+                        \)    
+                        other angle
+                  <p class="inline-images">        
+                    <img src="images\5.3程式碼跟圖片\Ellipse Path of the Motion 2 ani P.40.gif" alt="" />
+                    <img src="images\5.3程式碼跟圖片\Ellipse Path of the Motion2 P.40.gif" alt="" />
+                  </p>      
+   <section>
+     <a href="#work4" class="icon solid fa-dog">
+       <span>work4</span>
+     </a>
+ </section>
+ </article>
+ <article id="work4" class="panel">
+  <header>
+     <h1>Anisotropic Harmonic Oscillator</h1>
+  </header>
+  <p>The motion of the kind of oscillators is <span class="red">Lissajous Curve</span>
+    It is the combination of two sine waves with different ratios between phases and amplitudes.</p>
+    <p>
+      <span class="yellow">
+      $$
+      \begin{cases}
+      x(\theta) = a\sin(\theta) \\
+      y(\theta) = b\sin(n\theta + \phi)
+      \end{cases}
+      $$
+      <p>In this chapter, we rewrite the definition of a Lissajous curve into </p>
+      <span class="yellow">
+      $$
+      \left\{
+        \begin{array}{l}
+        x(t) = A\cos(\omega_x t) \\
+        y(t) = B\cos(\omega_y t - \delta)
+        \end{array}
+        \right.        
+      $$
+      </span>
+    </p>
+    <head>
+      <h2>some visualization examples</h2>
+    </head>
+    <head>
+      <h6>The ratio n=2</h6>
+    </head>
+    <p class="inline-images">        
+      <img src="images\5.3程式碼跟圖片\Lissajous Curve 1 P.43.gif" alt="" />
+      <img src="images\5.3程式碼跟圖片\Lissajous Curve 2 P.43.gif" alt="" />
+    </p>      
+    <head>
+      <h6>changing phases</h6>
+    </head>
+    <p >        
+      <img src="images\5.3程式碼跟圖片\Lissajous Curve with Different Phases 1 P.44.gif" alt="" />
+    </p>      
+    <head>
+      <h6>Famous examples</h6>
+    </head>
+    <p class="inline-images">        
+      <img src="images\5.3程式碼跟圖片\Lemniscate of Gerono P.44.png" alt="" />
+      <img src="images\5.3程式碼跟圖片\Part of Parabola P.44.png" alt="" />
+    </p>      
+    <p>
+      The left one is a part of lemniscate of Gerono.
+      The right one is a part of parabola.
+    </p>
+    <head>
+      <h6>Different amplitudes </h6>
+    </head>
+    <p>
+      One of the amplitudes is irrational.
+    </p>
+    <p class="inline-images">        
+      <img src="images\5.3程式碼跟圖片\Lissajous curve irrational 1 P.45.gif" alt="" />
+      <img src="images\5.3程式碼跟圖片\Lissajous curve irrational 2 P.45.gif" alt="" />
+    </p> 
+    <p>
+      <img src="images\5.3程式碼跟圖片\Lissajous Curve with Different Phases 2 P.46.gif">
+    </p>
+    <p>The path changes with phase when the ratio is <sapn class="red">irrational.</sapn></p>
+    <head>
+      <h6>Comparisons </h6>
+      <p class="image-containers222">        
+        <img src="images\5.3程式碼跟圖片\Lissajous Curve 3 P.47.gif" alt="" />
+        <img src="images\5.3程式碼跟圖片\Lissajous Curve 4 P.47.gif" alt="" />
+        <img src="images\5.3程式碼跟圖片\Lissajous Curve 5 P.47.gif" alt="" />
+      </p> 
+      <p class="image-containers222">        
+        <img src="images\5.3程式碼跟圖片\Lissajous curve irrational 3 P.48.gif" alt="" />
+        <img src="images\5.3程式碼跟圖片\Lissajous curve irrational 4 P.48.gif" alt="" />
+        <img src="images\5.3程式碼跟圖片\Lissajous curve irrational 5 P.48.gif" alt="" />
+      </p>     
+    </head>
+<section>
+ <a href="index.html" class="icon solid fa-home">
+  <span>MENU</span>
+</a>
+</section>
+</article>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+
+ </body>
+</html>
